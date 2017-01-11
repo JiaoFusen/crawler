@@ -5,6 +5,10 @@ import string
 import re
 import urllib2
 import MySQLdb
+import sys;
+
+reload(sys);
+sys.setdefaultencoding("utf8")
 class DouBanSpider(object) :
 
     def __init__(self) :
@@ -58,12 +62,15 @@ def main() :
     my_spider.start_spider()
     con = MySQLdb.connect(host='127.0.0.1', port=3306, user='root', passwd='', db='test', charset='utf8', use_unicode=True)
     cur = con.cursor()
+    f = open('output.txt','w')
     # print my_spider.datas[0]
     # cur.execute("INSERT INTO douban (name) VALUES (%s)", (my_spider.datas[0]))
     for item in my_spider.datas:
         print item
+        f.write(item)
         cur.execute("INSERT INTO douban (name) VALUES (%s)", item)
     print "豆瓣爬虫爬取结束..."
+    f.close()
     cur.close()
     con.commit()
     con.close()
