@@ -10,5 +10,5 @@
 	列：name （用来存储趴下来的电影）
 	
 ### 程序运行截图：
-！https://raw.githubusercontent.com/JiaoFusen/crawler/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%95%8C%E9%9D%A2.JPG
+！[pic_1] https://raw.githubusercontent.com/JiaoFusen/crawler/master/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%95%8C%E9%9D%A2.JPG
 
